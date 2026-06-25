@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { Button } from "./common/button"
-import { Card, CardContent, CardHeader, CardTitle } from "./common/card"
+import Button from "./common/Button"
+import { Card, CardContent, CardHeader, CardTitle } from "./common/Card"
 import { AlertCircle, ChevronLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
 

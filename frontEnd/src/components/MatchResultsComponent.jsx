@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion'
-import { Card, CardContent, CardHeader, CardTitle } from "./common/card"
-import { Badge } from "./common/badge"
-import { Button } from "./common/button"
+import { Card, CardContent, CardHeader, CardTitle } from "./common/Card"
+import Badge from "./common/Badge"
+import Button from "./common/Button"
 import { Award, FileText, CheckCircle2, AlertCircle, Sparkles, ChevronLeft, RefreshCw } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 export default function MatchResultsComponent({ data }) {
   const navigate = useNavigate()
-  
+
   const matchData = {
     overallMatch: data?.match_score || 0,
     summary: data?.summary || "",
@@ -18,14 +18,14 @@ export default function MatchResultsComponent({ data }) {
 
   return (
     <main className="max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 space-y-6 flex-grow">
-      
+
       {/* High-Visibility/High-Contrast Back Navigation Option Block */}
       <div className="bg-slate-900/80 border border-blue-500/20 p-4 rounded-xl backdrop-blur-md shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="space-y-0.5 text-center sm:text-left">
           <h3 className="text-sm font-bold text-white">Need to adjust your criteria?</h3>
           <p className="text-xs text-slate-400">Head back to upload screen to alter your files or review text parameters.</p>
         </div>
-        <Button 
+        <Button
           onClick={() => navigate('/')}
           className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold rounded-lg px-6 py-2.5 text-sm flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-all shrink-0"
         >

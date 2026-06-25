@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Button } from "./common/button"
-import { Input } from "./common/input"
-import { Textarea } from "./common/textarea"
-import { Card, CardContent, CardHeader, CardTitle } from "./common/card"
+import {
+  Button,
+  Input,
+  Textarea,
+  Card, CardContent, CardHeader, CardTitle
+} from "./common/index"
+
 import { Upload, FileText, Zap, Sparkles } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useToast } from "../hooks/use-toast"
