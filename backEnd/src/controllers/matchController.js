@@ -18,7 +18,7 @@ async function extractTextFromFile(filePath) {
 // Helper function for Gemini structured text generation
 async function generateAtsAnalysis(prompt) {
   const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
+    model: "gemini-3.5-flash", // Updated deprecated model string
     contents: prompt,
     config: {
       responseMimeType: "application/json",
