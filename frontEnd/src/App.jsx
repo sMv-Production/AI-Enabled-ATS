@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo , useEffect } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -60,7 +60,12 @@ function AppRouter() {
 
 export default function App() {
   const [data, setData] = useState(null);
-
+  useEffect(() => {
+    fetch('https://ai-enabled-ats-ngmw.onrender.com/ping')
+      .then(res => res.text())
+      .then(data => console.log(data))
+      .catch(err => console.error(err));
+  }, []); // Empty dependency array ensures it runs exactly once on mount
   return (
     <DataProvider value={{ data, setData }}>
       <AppRouter />
