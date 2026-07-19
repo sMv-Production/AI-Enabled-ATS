@@ -8,10 +8,15 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Server setting
+app.set('trust proxy', 1); // Use the number of proxies your server sits behind
+app.get('/ping', (req, res) => {
+  res.status(200).send('success');
+});
+
 // Middleware
 app.use(cors( { origin: process.env.FRONTEND_URL } ) );
 app.use(express.json());
-// app.set("trust proxy", 1);
 
 // Routes
 app.use("/api", matchRoutes);
